@@ -1,0 +1,616 @@
+{
+	"info": {
+		"_postman_id": "59ddf3f2-d8c4-44f5-804b-cb5b917eb944",
+		"name": "Drill_m7",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27757206"
+	},
+	"item": [
+		{
+			"name": "Get users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Listar los usuarios con sus Bootcamp.",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1650"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"672-srkTuX7PaT8O10Z1fb+ojlfbXsE\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 30 Jun 2023 19:20:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"id\": 2,\n            \"firstName\": \"Mateo\",\n            \"lastName\": \"Díaz\",\n            \"email\": \"mateo.diaz@correo.com\",\n            \"bootcamps\": [\n                {\n                    \"id\": 1,\n                    \"title\": \"Introduciendo El Bootcamp De React.\",\n                    \"cue\": 10,\n                    \"description\": \"React es la librería más usada en JavaScript para el desarrollo de interfaces.\"\n                },\n                {\n                    \"id\": 2,\n                    \"title\": \"Bootcamp Desarrollo Web Full Stack.\",\n                    \"cue\": 12,\n                    \"description\": \"Crearás aplicaciones web utilizando las tecnologías y lenguajes más actuales y populares, como: JavaScript, nodeJS, Angular, MongoDB, ExpressJS.\"\n                },\n                {\n                    \"id\": 3,\n                    \"title\": \"Bootcamp Big Data, Inteligencia Artificial & Machine Learning.\",\n                    \"cue\": 18,\n                    \"description\": \"Domina Data Science, y todo el ecosistema de lenguajes y herramientas de Big Data, e intégralos con modelos avanzados\"\n                }\n            ]\n        },\n        {\n            \"id\": 3,\n            \"firstName\": \"Santiago\",\n            \"lastName\": \"Mejías\",\n            \"email\": \"santiago.mejias@correo.com\",\n            \"bootcamps\": [\n                {\n                    \"id\": 1,\n                    \"title\": \"Introduciendo El Bootcamp De React.\",\n                    \"cue\": 10,\n                    \"description\": \"React es la librería más usada en JavaScript para el desarrollo de interfaces.\"\n                },\n                {\n                    \"id\": 3,\n                    \"title\": \"Bootcamp Big Data, Inteligencia Artificial & Machine Learning.\",\n                    \"cue\": 18,\n                    \"description\": \"Domina Data Science, y todo el ecosistema de lenguajes y herramientas de Big Data, e intégralos con modelos avanzados\"\n                }\n            ]\n        },\n        {\n            \"id\": 4,\n            \"firstName\": \"Lucas\",\n            \"lastName\": \"Rojas\",\n            \"email\": \"lucas.rojas@correo.com\",\n            \"bootcamps\": [\n                {\n                    \"id\": 3,\n                    \"title\": \"Bootcamp Big Data, Inteligencia Artificial & Machine Learning.\",\n                    \"cue\": 18,\n                    \"description\": \"Domina Data Science, y todo el ecosistema de lenguajes y herramientas de Big Data, e intégralos con modelos avanzados\"\n                }\n            ]\n        },\n        {\n            \"id\": 5,\n            \"firstName\": \"Facundo\",\n            \"lastName\": \"Fernandez\",\n            \"email\": \"facundo.fernandez@correo.com\",\n            \"bootcamps\": []\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Post user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"firstName\": \"Mateo\",\r\n            \"lastName\": \"Díaz\",\r\n            \"email\": \"mateo.diaz@correo.com\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Consultar un usuario por id, incluyendo los Bootcamp.",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/users/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "721"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2d1-uv4pGFDAMM8YhRjxBHh4qZqwKNU\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 30 Jun 2023 19:31:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"firstName\": \"Mateo\",\n        \"lastName\": \"Díaz\",\n        \"email\": \"mateo.diaz@correo.com\",\n        \"bootcamps\": [\n            {\n                \"id\": 1,\n                \"title\": \"Introduciendo El Bootcamp De React.\",\n                \"cue\": 10,\n                \"description\": \"React es la librería más usada en JavaScript para el desarrollo de interfaces.\"\n            },\n            {\n                \"id\": 2,\n                \"title\": \"Bootcamp Desarrollo Web Full Stack.\",\n                \"cue\": 12,\n                \"description\": \"Crearás aplicaciones web utilizando las tecnologías y lenguajes más actuales y populares, como: JavaScript, nodeJS, Angular, MongoDB, ExpressJS.\"\n            },\n            {\n                \"id\": 3,\n                \"title\": \"Bootcamp Big Data, Inteligencia Artificial & Machine Learning.\",\n                \"cue\": 18,\n                \"description\": \"Domina Data Science, y todo el ecosistema de lenguajes y herramientas de Big Data, e intégralos con modelos avanzados\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Put user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"firstName\": \"Mateo\",\r\n            \"lastName\": \"Díaz\",\r\n            \"email\": \"mateo.diaz@correo.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Actualizar el usuario según su id; por ejemplo: actualizar el usuario con id=1 por Pedro Sánchez.",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"firstName\": \"Pedro\",\r\n            \"lastName\": \"Sánchez\",\r\n            \"email\": \"mateo.diaz@correo.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/users/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"2"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2a-PfGoFE/oa91J0MVuv3816BZ2q3g\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 30 Jun 2023 19:33:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": " Usuario con ID: 1 modificado exitosamente"
+				}
+			]
+		},
+		{
+			"name": "Eliminar por status",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"status\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Eliminar un usuario por id; por ejemplo: el usuario con id=1.",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"status\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/users/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"2"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "38"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"26-qekRAzJkFv/e3v/tLVj3kmajtzw\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 30 Jun 2023 19:34:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Usuario con ID: 2 eliminado con éxito"
+				}
+			]
+		},
+		{
+			"name": "Destruir usuario",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users/destroy/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"destroy",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post bootcamp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"title\": \"Introduciendo El Bootcamp De React.\",\r\n            \"cue\": 10,\r\n            \"description\": \"React es la librería más usada en JavaScript para el desarrollo de interfaces.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/bootcamps",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"bootcamps"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": 1,\r\n  \"bootcampId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/bootcamps/asociar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"bootcamps",
+						"asociar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find by id bootcamp",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/bootcamps/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"bootcamps",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Consultando el Bootcamp por id, incluyendo los usuarios",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/bootcamps/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"bootcamps",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "360"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"168-6E9cozq2lUX9KKD8Ny+B47RmhTc\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 30 Jun 2023 19:22:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"Introduciendo El Bootcamp De React.\",\n        \"cue\": 10,\n        \"description\": \"React es la librería más usada en JavaScript para el desarrollo de interfaces.\",\n        \"users\": [\n            {\n                \"id\": 2,\n                \"firstName\": \"Mateo\",\n                \"lastName\": \"Díaz\",\n                \"email\": \"mateo.diaz@correo.com\"\n            },\n            {\n                \"id\": 3,\n                \"firstName\": \"Santiago\",\n                \"lastName\": \"Mejías\",\n                \"email\": \"santiago.mejias@correo.com\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Find all bootcamp",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Listar todos los Bootcamp con sus usuarios.",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/bootcamps",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"bootcamps"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1167"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"48f-ZMZUmlsEah7mDL00HEHPvmXtFmQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 30 Jun 2023 19:24:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"Introduciendo El Bootcamp De React.\",\n            \"cue\": 10,\n            \"description\": \"React es la librería más usada en JavaScript para el desarrollo de interfaces.\",\n            \"users\": [\n                {\n                    \"id\": 2,\n                    \"firstName\": \"Mateo\",\n                    \"lastName\": \"Díaz\",\n                    \"email\": \"mateo.diaz@correo.com\"\n                },\n                {\n                    \"id\": 3,\n                    \"firstName\": \"Santiago\",\n                    \"lastName\": \"Mejías\",\n                    \"email\": \"santiago.mejias@correo.com\"\n                }\n            ]\n        },\n        {\n            \"id\": 2,\n            \"title\": \"Bootcamp Desarrollo Web Full Stack.\",\n            \"cue\": 12,\n            \"description\": \"Crearás aplicaciones web utilizando las tecnologías y lenguajes más actuales y populares, como: JavaScript, nodeJS, Angular, MongoDB, ExpressJS.\",\n            \"users\": [\n                {\n                    \"id\": 2,\n                    \"firstName\": \"Mateo\",\n                    \"lastName\": \"Díaz\",\n                    \"email\": \"mateo.diaz@correo.com\"\n                }\n            ]\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Bootcamp Big Data, Inteligencia Artificial & Machine Learning.\",\n            \"cue\": 18,\n            \"description\": \"Domina Data Science, y todo el ecosistema de lenguajes y herramientas de Big Data, e intégralos con modelos avanzados\",\n            \"users\": [\n                {\n                    \"id\": 2,\n                    \"firstName\": \"Mateo\",\n                    \"lastName\": \"Díaz\",\n                    \"email\": \"mateo.diaz@correo.com\"\n                },\n                {\n                    \"id\": 3,\n                    \"firstName\": \"Santiago\",\n                    \"lastName\": \"Mejías\",\n                    \"email\": \"santiago.mejias@correo.com\"\n                },\n                {\n                    \"id\": 4,\n                    \"firstName\": \"Lucas\",\n                    \"lastName\": \"Rojas\",\n                    \"email\": \"lucas.rojas@correo.com\"\n                }\n            ]\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}
